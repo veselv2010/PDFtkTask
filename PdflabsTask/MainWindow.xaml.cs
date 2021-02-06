@@ -39,8 +39,8 @@ namespace PdflabsTask
                 _pdfPath = file;
                 _outputPath = System.IO.Path.GetDirectoryName(file);
 
-                SelectedPdfPathBox.Text = file;
-                OutputPathBox.Text = _outputPath;
+                SelectedPdfPathBox.Content = file;
+                OutputPathBox.Content = _outputPath;
             }
         }
 
@@ -56,7 +56,7 @@ namespace PdflabsTask
                 string outputPath = fileDialog.SelectedPath;
 
                 _outputPath = outputPath;
-                OutputPathBox.Text = outputPath;
+                OutputPathBox.Content = outputPath;
             }
         }
 

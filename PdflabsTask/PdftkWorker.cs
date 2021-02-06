@@ -18,13 +18,13 @@ namespace PdflabsTask
 
         public void JoinPdfs()
         {
-            startCmd(_workPath + "\\*.pdf cat output merge.pdf");
+            startCmd(_workPath + $"\\*.pdf cat output {_workPath}/merge.pdf");
         }
 
         public void PdfToJpges(string filename, bool isRgb)
         {
             string rgbCommand = isRgb ? "RGB" : "LinearGray";
-            System.Diagnostics.Process.Start("CMD.exe", $"/C convert -colorspace {rgbCommand} -interlace none -density 300 {filename} image-%02d.jpg");
+            System.Diagnostics.Process.Start("CMD.exe", $"/C convert -colorspace {rgbCommand} -interlace none -density 300 {filename} {_workPath}/image-%02d.jpg");
         }
 
         private void startCmd(string command)

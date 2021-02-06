@@ -5,31 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PdflabsTask"
         mc:Ignorable="d"
-        Title="PDFtk gui" MaxHeight="175" MinWidth="800" MinHeight="175" MaxWidth="800">
-    <Grid Height="175" Width="800">
-
-        <StackPanel Orientation="Horizontal" Margin="20,-100,20,0" Grid.RowSpan="2">
-            <Button Width="150" Height="20" Content="Select pdf" x:Name="SelectPdfButton" Click="SelectPdfButton_Click"></Button>
-            <TextBlock x:Name="SelectedPdfPathBox" Width="600" Height="25"></TextBlock>
-
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="20,-50,20,0" Grid.RowSpan="2">
-            <Button x:Name="OutputPathButton" Width="150" Height="20" Content="Select work path" Click="OutputPathButton_Click"></Button>
-            <TextBlock x:Name="OutputPathBox" Width="600" Height="25"></TextBlock>
-
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="20,0,20,0" Grid.RowSpan="2">
-            <Button x:Name="PdfToPagesButton" Width="150" Height="20" Content="Export PDF as single pages" Click="PdfToPagesButton_Click"></Button>
-            <Button x:Name="MergePdfsButton" Width="250" Height="20" Margin="20" Content="Merge PDF pages into single file" Click="MergePdfsButton_Click"></Button>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="20,50,20,0" Grid.RowSpan="2">
-            <Button x:Name="PdfToJpegButton" Width="250" Height="20" Content="Convert PDF into single page JPGs" Click="PdfToJpegButton_Click"></Button>
-            <CheckBox x:Name="MonochromeCheck" Height="25" Margin="20" Content="is RGB?"></CheckBox>
-        </StackPanel>
-
-
+        Title="PDFtk gui" MaxHeight="155" MinWidth="700" MinHeight="155" MaxWidth="700" Width="700">
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Center" MaxHeight="175" MinWidth="800" MinHeight="175" MaxWidth="800" Height="160">
+        <Label x:Name="SelectedPdfPathBox" Content="Select PDF file" Width="600" Height="25" MouseDown="SelectPdfButton_Click" Margin="93,12,107,138" HorizontalContentAlignment="Center" Cursor="Hand"/>
+        <Label x:Name="OutputPathBox" Content="Select work path" Width="600" Height="25" MouseDown="OutputPathButton_Click" Margin="93,37,107,113" HorizontalContentAlignment="Center" Cursor="Hand"/>
+        <Button x:Name="PdfToPagesButton" Width="150" Height="20" Content="Export PDF as single pages" Click="PdfToPagesButton_Click" RenderTransformOrigin="0.784,1.217" Margin="290,67,360,88"/>
+        <Button x:Name="MergePdfsButton" Height="20" Margin="93,67,513,88" Content="Merge PDF pages into single file" Click="MergePdfsButton_Click"/>
+        <Button x:Name="PdfToJpegButton" Width="250" Height="20" Content="Convert PDF into single page JPGs" Click="PdfToJpegButton_Click" Margin="443,67,107,88"/>
+        <CheckBox x:Name="MonochromeCheck" Margin="622,92,107,65" Content="is RGB?"/>
     </Grid>
 </Window>
